@@ -4,11 +4,10 @@ class ListContacts extends Component{
     render(){
         return(
                 <ol className='contact-list'>
-                    {/*contacts array*/}
+                    {/*contacts array so we can use map() function*/}
                     {this.props.contacts.map(contact =>
-                    <li>
-                        {contact.name}
-                    </li>)}
+                        <li key={contact.id}> {contact.name} </li>)
+                    }
 
                 </ol>
         )
