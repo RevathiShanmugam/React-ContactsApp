@@ -22,10 +22,10 @@ class ListContacts extends Component{
             } else {
                 showingContacts = this.props.contacts
             }
+            showingContacts.sort(sortBy('name'))
 
         return(
             <div className='list-contacts'>
-            {JSON.stringify(this.state)}
             <div className='list-contacts-top'>
                 <input className='search-contacts'
                     type='text'
